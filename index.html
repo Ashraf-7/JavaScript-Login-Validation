@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" href="imgs/favicon.png" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Mail Style File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Login Validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Start Landing Section -->
+      <div class="landing">
+        <div class="logo">
+          <img src="imgs/logo.svg" alt="Logo" />
+        </div>
+        <div class="image">
+          <img src="imgs/illustration.svg" alt="Landing Image" />
+        </div>
+        <p class="text">
+          Start for free & Get <br />
+          Attractive offers Today !
+        </p>
+      </div>
+      <!-- End Landing Section -->
+      <form action="" id="form">
+        <div class="title">
+          <h2>get started</h2>
+          <p>Already have an account?</p>
+          <a href="#">sign in</a>
+        </div>
+        <div class="social-login">
+          <a href="#" class="google">
+            <img src="imgs/google.png" alt="Sign up with Google" /> sign up
+          </a>
+          <a href="#" class="facebook">
+            <img src="imgs/facebook.png" alt="Sign up with facebook" /> sign up
+          </a>
+        </div>
+        <span class="or">or</span>
+        <div class="form">
+          <!-- /**
+          *! Username Input
+        **/ -->
+          <div class="username">
+            <label for="username">User Name</label>
+            <i class="fas fa-user"></i>
+            <input
+              class="input"
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Ashraf Awad"
+            />
+            <i class="far fa-check-circle success-icon"></i>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <div class="error"></div>
+          </div>
+          <!-- /**
+          *! Email Input
+        **/ -->
+          <div class="email">
+            <label for="email">Email</label>
+            <i class="far fa-envelope"></i>
+            <input
+              class="input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="ashraf@gmail.com"
+            />
+            <i class="far fa-check-circle success-icon"></i>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <div class="error"></div>
+          </div>
+          <!-- /**
+          *! Password Input
+        **/ -->
+          <div class="password">
+            <label for="password">Password</label>
+            <i class="fas fa-lock"></i>
+            <input
+              class="input"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="password..."
+            />
+            <i class="far fa-check-circle success-icon"></i>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <div class="error"></div>
+          </div>
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

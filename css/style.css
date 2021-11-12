@@ -1,0 +1,236 @@
+/* Start Global Variables */
+:root {
+  --main-color: #f2796e;
+  --line-height: 1.5;
+  --main-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  --main-shadow-alt: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  --main-transition: 0.3s;
+  --border-radius: 6px;
+}
+/* End Global Variables */
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: sans-serif, Tahoma;
+  caret-color: var(--main-color);
+}
+::selection {
+  background-color: #000;
+  color: var(--main-color);
+}
+/* End Global Rules */
+.container {
+  display: flex;
+}
+/* Start Landing Section */
+.landing {
+  background-color: var(--main-color);
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px 10px;
+  min-height: 100vh;
+}
+.landing .logo {
+  align-self: flex-start;
+}
+.landing .logo img {
+  cursor: pointer;
+}
+.landing .image img {
+  max-width: 100%;
+  width: 90%;
+}
+.landing .text {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  line-height: var(--line-height);
+  margin-right: 50px;
+}
+/* End Landing Section */
+/* Start Form Section */
+form {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  box-shadow: var(--main-shadow);
+}
+/* Start Title */
+form .title {
+  align-self: flex-start;
+  width: 100%;
+}
+form .title h2 {
+  font-size: 35px;
+  text-transform: capitalize;
+  margin-bottom: 14px;
+}
+form .title a {
+  color: var(--main-color);
+  display: block;
+  margin-top: 3px;
+  text-transform: capitalize;
+}
+/* End Title */
+/* Start Social Buttons */
+form .social-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin: 20px;
+  padding: 0 30px;
+}
+form .social-login a {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: var(--border-radius);
+  padding: 12px 0;
+  text-transform: capitalize;
+  box-shadow: var(--main-shadow);
+  transition: var(--main-transition);
+}
+form .social-login a.google {
+  background-color: #fff;
+  color: #222;
+  border: 2px solid #c4c4c4;
+}
+form .social-login a.facebook {
+  background-color: #4f70b5;
+  color: #fff;
+}
+form .social-login a:hover {
+  box-shadow: var(--main-shadow-alt);
+  opacity: 0.9;
+}
+/* End Social Buttons */
+form .or {
+  margin: 20px 0 35px;
+  text-transform: capitalize;
+  font-size: 21px;
+}
+/* Start Form */
+form .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+form .form > div {
+  position: relative;
+  width: 100%;
+}
+.form label {
+  display: block;
+  margin-bottom: 7px;
+  color: #222;
+}
+.form .input {
+  width: 100%;
+  height: 40px;
+  padding: 0 32px;
+  border: 2px solid #c4c4c4;
+  border-radius: var(--border-radius);
+  box-shadow: var(--main-shadow);
+  transition: var(--main-transition);
+}
+.form .input::placeholder {
+  transition: var(--main-transition);
+}
+.form .input:focus {
+  outline: none;
+  border-color: var(--main-color);
+}
+.form .input:focus::placeholder {
+  opacity: 0;
+}
+.form > div i {
+  position: absolute;
+  padding: 10px;
+}
+.form > div i:first-of-type {
+  color: #444;
+}
+.success-icon,
+.failure-icon {
+  right: 0;
+  opacity: 0;
+}
+.success-icon {
+  color: #0f0;
+}
+.failure-icon {
+  color: #f00;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.error {
+  color: #f00;
+  margin: 5px;
+  font-size: 14px;
+  /* opacity: 0; */
+}
+.form button {
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 40px;
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+  font-size: 19px;
+  border: 2px solid var(--main-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--main-shadow);
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.form button:hover {
+  opacity: 0.8;
+  box-shadow: var(--main-shadow-alt);
+}
+/* End Form */
+/* End Form Section */
+/** Start Media Query */
+@media (max-width: 991px) {
+  .container {
+    flex-direction: column;
+  }
+  .landing {
+    margin-top: -40px;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 480px) {
+  .form {
+    flex-direction: column;
+  }
+  form .social-login a {
+    width: 100%;
+  }
+}
+/** End Media Query */
