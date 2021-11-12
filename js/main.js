@@ -4,6 +4,7 @@ const getElement = (selector, isList) => {
     ? [...document.querySelectorAll(selector)]
     : document.querySelector(selector);
 
+  // Check List or not & list is empty or not
   if ((!isList && el) || (isList && !el.length < 1)) return el;
   throw new Error(`Please double Check Selector: ${selector}`);
 };
@@ -28,16 +29,18 @@ form.addEventListener("submit", (e) => {
 // Engine Function for Validation
 let engine = (id, index, messgae) => {
   if (id.value.trim() === "") {
+    // Error Messages
     errorMsg[index].innerHTML = messgae;
+    // Icons
     failureIcon[index].style.opacity = 1;
     successIcon[index].style.opacity = 0;
     id.style.border = "2px solid red";
   } else {
+    // Error Message
     errorMsg[index].innerHTML = "";
+    // Icons
     failureIcon[index].style.opacity = 0;
     successIcon[index].style.opacity = 1;
     id.style.border = "2px solid green";
   }
 };
-
-// https://www.youtube.com/playlist?list=PLFBirL3MAv2_1ASjvgPa3TVgJ2yQ09z31
